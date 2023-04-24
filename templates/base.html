@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather:wght@300&family=Poltawski+Nowy:ital,wght@0,500;1,400&family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    
+    <style>
+        body{
+            background-color : #FAFAFA;
+            font-family: 'Poppins', sans-serif;
+            padding-top: 40px;
+            margin:auto;
+        }
+
+        h1{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 100;
+        }
+        
+        h2,h3,h4,h5,h6
+        {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        a,p 
+        {
+            color: rgb(0, 0, 0);
+        }
+
+        .container{
+            max-width: 550px;
+            margin: auto;
+            background-color: #fff;
+        }
+
+        .header-bar{
+            display: flex;
+            justify-content: space-between;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(90deg , rgb(140, 125, 218) 43% , rgb(49, 34, 191)100% );
+        }
+
+        .header-bar a {
+            color: bisque;
+            text-decoration:none;
+        }
+
+        .task-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid rgba(70, 70, 70, 0.245);
+        }
+
+        .task-title{
+            display: flex;
+        }
+        
+        .task-title a {
+            text-decoration: none;
+            color: #4b5156;
+            margin-left: 10px;
+        }
+
+        .task-complete-icon{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(106, 219, 78);
+            border-radius: 50%;
+        }
+
+        .task-incomplete-icon{
+            height: 20px;
+            width: 20px;
+            background-color: rgba(103, 103, 103, 0.455);
+            border-radius: 50%;
+        }
+
+        .delete-link{
+            text-decoration: none;
+            font-weight: 900;
+            color: red;
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        #search-add-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+
+        #add-link{
+            color: rgb(48, 195, 62);
+            text-decoration: none;
+            font-size: 42px;
+            text-shadow: 1px 1px rgb(34, 123, 44);
+        }
+        
+        input[type=text],
+        input[type=password],
+        textarea {
+            border: 1px solid rgb(140, 125, 218);
+            border-radius: 5px;
+            padding:  10px;
+            width: 90%;
+        }
+
+        label {
+            padding-top: 10px !important;
+            display: block;
+        }
+
+        .button{
+            border: 1px solid rgb(140, 125, 218);
+            background-color: #FAFAFA;
+            color: rgb(140, 125, 218);
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        {% block content %}
+        
+        
+        
+        {% endblock content %}
+    </div>
+
+</body>
+</html>
